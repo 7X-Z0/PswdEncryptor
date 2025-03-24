@@ -20,6 +20,7 @@ fn main() {
 
     let ciphertext = cipher.encrypt(&nonce, input.as_bytes());
     let ciphertext_result = ;
+    
     match ciphertext_result {
         Ok(ciphertext) => {
             let base64_ciphertext = base64::encode(&ciphertext);
