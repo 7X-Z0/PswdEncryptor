@@ -3,6 +3,7 @@ use chacha20poly1305::{
     aead::{Aead, AeadCore, KeyInit, Nonce, OsRng},
     ChaCha20Poly1305,
 };
+use base64;
 
 fn main() {
     let mut input = String::new();
@@ -17,9 +18,17 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read line");
 
-    let ciphertext = cipher.encrypt(&nonce, input);
-    println!("{}", ciphertext);
-
+    let ciphertext = cipher.encrypt(&nonce, input.as_bytes());
+    let ciphertext_result = ;
+    match ciphertext_result {
+        Ok(ciphertext) => {
+            let base64_ciphertext = base64::encode(&ciphertext);
+            println!("Ciphertext: {}", base64_ciphertext);
+        }
+        Err(e) => {
+            println!("Encryption failed: {:?}", e);
+        }
+    }
 
     
 }
