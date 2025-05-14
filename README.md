@@ -12,4 +12,5 @@ Learn to create a key file and a way to store string to be accessed later.
 Used what was learned to make a notepad-like program that encrypts all text made.
 
 *needs to be easily accessible
+
 *needs to be secure
