@@ -44,11 +44,6 @@ fn main() {
     
 }
 
-fn key_gen() -> Result<[u8; KEY_LENGTH]> {
-    
-
-}
-
 fn keyfile() {
     let path = Path::new(KEY_FILE);
     let mut input = String::new();
